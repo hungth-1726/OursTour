@@ -11,6 +11,8 @@ target 'NoobTour' do
   pod 'Firebase/Auth'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Firestore'
+  pod 'SDWebImage'
 
   target 'NoobTourTests' do
     inherit! :search_paths

@@ -16,9 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        loginButton.delegate = self
-        loginButton.permissions = ["public_profile", "email"]
     }
     
     @IBAction func loginWithFacebook() {
@@ -50,26 +47,12 @@ class ViewController: UIViewController {
     
     func showDialogMessage(title: String ,message : String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {(action:UIAlertAction!) in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainController") as! MainController
+            let navigationController = UINavigationController(rootViewController: vc)
+            
+            self.present(navigationController, animated: true, completion: nil)
+        }))
         present(alertController, animated: true, completion: nil)
     }
 }
-
-extension ViewController : LoginButtonDelegate {
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-    }
-    
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        if let error = error {
-            self.showDialogMessage(title: "Login failed", message: error.localizedDescription)
-            return
-        }
-        if (result?.isCancelled)!{
-            return
-        }
-        if let accessToken = AccessToken.current?.tokenString {
-            self.authFirebase(accessToken : accessToken)
-        }
-    }
-}
-

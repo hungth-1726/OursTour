@@ -16,6 +16,9 @@
 		3D8CB66C22AE3BA4000631C1 /* NoobTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CB66B22AE3BA4000631C1 /* NoobTourTests.swift */; };
 		3D8CB67722AE3BA4000631C1 /* NoobTourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8CB67622AE3BA4000631C1 /* NoobTourUITests.swift */; };
 		3D8CB68522AE3C85000631C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CB68422AE3C85000631C1 /* GoogleService-Info.plist */; };
+		3DC637EC22B6205D00789305 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC637EA22B6205D00789305 /* TripTableViewCell.swift */; };
+		3DC637ED22B6205D00789305 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC637EB22B6205D00789305 /* TripTableViewCell.xib */; };
+		3DC637EF22B6A92B00789305 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC637EE22B6A92B00789305 /* Trip.swift */; };
 		729BF378F45EAE44A9F33BE4 /* Pods_NoobTour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1CF223F223E90E3E42C7CE /* Pods_NoobTour.framework */; };
 		755E04826A7353F2D9F220D2 /* Pods_NoobTourTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED438585CD4169444FECE32 /* Pods_NoobTourTests.framework */; };
 		C03064AB037B8B535245F69E /* Pods_NoobTourUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88182E2325A9343E834A0325 /* Pods_NoobTourUITests.framework */; };
@@ -55,6 +58,9 @@
 		3D8CB67622AE3BA4000631C1 /* NoobTourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoobTourUITests.swift; sourceTree = "<group>"; };
 		3D8CB67822AE3BA4000631C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D8CB68422AE3C85000631C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DC637EA22B6205D00789305 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		3DC637EB22B6205D00789305 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		3DC637EE22B6A92B00789305 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		483D1DDD16D7545ADAE7CA25 /* Pods-NoobTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoobTour.debug.xcconfig"; path = "Target Support Files/Pods-NoobTour/Pods-NoobTour.debug.xcconfig"; sourceTree = "<group>"; };
 		4ED438585CD4169444FECE32 /* Pods_NoobTourTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoobTourTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E1CF223F223E90E3E42C7CE /* Pods_NoobTour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoobTour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +144,9 @@
 				3D8CB65F22AE3BA4000631C1 /* LaunchScreen.storyboard */,
 				3D8CB66222AE3BA4000631C1 /* Info.plist */,
 				3D4CD4D422AE69DC009BAB59 /* MainController.swift */,
+				3DC637EA22B6205D00789305 /* TripTableViewCell.swift */,
+				3DC637EB22B6205D00789305 /* TripTableViewCell.xib */,
+				3DC637EE22B6A92B00789305 /* Trip.swift */,
 			);
 			path = NoobTour;
 			sourceTree = "<group>";
@@ -184,7 +193,7 @@
 				3D8CB64F22AE3BA2000631C1 /* Sources */,
 				3D8CB65022AE3BA2000631C1 /* Frameworks */,
 				3D8CB65122AE3BA2000631C1 /* Resources */,
-				47F5B540FD266AC43BBD905D /* [CP] Embed Pods Frameworks */,
+				90DD896EDD6B374B65F30FA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +298,7 @@
 				3D8CB66122AE3BA4000631C1 /* LaunchScreen.storyboard in Resources */,
 				3D8CB68522AE3C85000631C1 /* GoogleService-Info.plist in Resources */,
 				3D8CB65E22AE3BA4000631C1 /* Assets.xcassets in Resources */,
+				3DC637ED22B6205D00789305 /* TripTableViewCell.xib in Resources */,
 				3D8CB65C22AE3BA2000631C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +342,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47F5B540FD266AC43BBD905D /* [CP] Embed Pods Frameworks */ = {
+		90DD896EDD6B374B65F30FA0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,9 +410,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC637EF22B6A92B00789305 /* Trip.swift in Sources */,
 				3D8CB65922AE3BA2000631C1 /* ViewController.swift in Sources */,
 				3D4CD4D522AE69DC009BAB59 /* MainController.swift in Sources */,
 				3D8CB65722AE3BA2000631C1 /* AppDelegate.swift in Sources */,
+				3DC637EC22B6205D00789305 /* TripTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

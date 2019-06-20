@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="TripDetailCell" customModule="NoobTour" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ww2-I7-1Nh">
+                        <rect key="frame" x="8" y="15.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="4jC-Eu-4wg"/>
+                            <constraint firstAttribute="height" constant="50" id="ROK-Qf-Ctt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Người tạo chuyến đi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-7p-0Mk">
+                        <rect key="frame" x="73" y="15.5" width="154" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5qN-aP-UVE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLA-Wz-byv">
+                        <rect key="frame" x="73" y="43" width="154" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziZ-fq-HWY">
+                        <rect key="frame" x="295" y="25.5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="PpO-6f-XAd"/>
+                            <constraint firstAttribute="height" constant="30" id="iTR-OW-Z2O"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="ic_arrow_right"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ww2-I7-1Nh" secondAttribute="bottom" constant="15" id="1O7-vk-Yb5"/>
+                    <constraint firstItem="ww2-I7-1Nh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5lZ-bp-Vpw"/>
+                    <constraint firstItem="ww2-I7-1Nh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="AUF-m5-b0u"/>
+                    <constraint firstItem="FLA-Wz-byv" firstAttribute="top" secondItem="jJe-7p-0Mk" secondAttribute="bottom" constant="7.5" id="PhX-lh-j1O"/>
+                    <constraint firstAttribute="trailing" secondItem="ziZ-fq-HWY" secondAttribute="trailing" constant="15" id="YzE-wE-v3p"/>
+                    <constraint firstItem="FLA-Wz-byv" firstAttribute="trailing" secondItem="jJe-7p-0Mk" secondAttribute="trailing" id="ce5-ld-5jb"/>
+                    <constraint firstItem="jJe-7p-0Mk" firstAttribute="leading" secondItem="ww2-I7-1Nh" secondAttribute="trailing" constant="15" id="jcj-qM-aIJ"/>
+                    <constraint firstItem="FLA-Wz-byv" firstAttribute="leading" secondItem="jJe-7p-0Mk" secondAttribute="leading" id="kp5-CL-ZHu"/>
+                    <constraint firstItem="jJe-7p-0Mk" firstAttribute="top" secondItem="ww2-I7-1Nh" secondAttribute="top" id="oYp-Ml-4lZ"/>
+                    <constraint firstItem="ziZ-fq-HWY" firstAttribute="centerY" secondItem="ww2-I7-1Nh" secondAttribute="centerY" id="pO3-X5-ciz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameCreateTripLabel" destination="FLA-Wz-byv" id="97m-83-v3j"/>
+                <outlet property="titleCreateTripLabel" destination="jJe-7p-0Mk" id="Fe4-lk-nmz"/>
+                <outlet property="tripImageView" destination="ww2-I7-1Nh" id="SU9-dj-gLx"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_arrow_right" width="14" height="24"/>
+    </resources>
+</document>
